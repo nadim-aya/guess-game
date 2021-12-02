@@ -12,6 +12,14 @@ resetButton.style.display = 'none';
 
 guessField.focus();
 console.log(randomNumber);
+var input = document.querySelector('.guessField');
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.querySelector('.guessSubmit').click();
+
+  }
+});
 function checkGuess() 
 {
      let userGuess = Number(guessField.value);
